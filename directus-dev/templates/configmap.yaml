@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: directus-config
+  namespace: {{ .Release.Namespace }}
+data:
+  DB_CLIENT: "{{ .Values.env.DB_CLIENT }}"
+  DB_HOST: "{{ .Values.env.DB_HOST }}"
+  DB_PORT: "{{ .Values.env.DB_PORT }}"
+  DB_DATABASE: "{{ .Values.env.DB_DATABASE }}"
+  ADMIN_EMAIL: "{{ .Values.env.ADMIN_EMAIL }}"
