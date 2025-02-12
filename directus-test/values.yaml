@@ -14,7 +14,7 @@ env:
   DB_CLIENT: "postgres"
   DB_HOST: "host.docker.internal"
   DB_PORT: "5432"
-  DB_DATABASE: "directus-dev"
+  DB_DATABASE: "directus-test"
   ADMIN_EMAIL: "admin@example.com"
 
 secretEnv:
