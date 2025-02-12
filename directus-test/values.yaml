@@ -1,0 +1,38 @@
+replicaCount: 3
+
+image:
+  repository: directus/directus
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 8081
+  targetPort: 8055
+
+env:
+  DB_CLIENT: "postgres"
+  DB_HOST: "host.docker.internal"
+  DB_PORT: "5432"
+  DB_DATABASE: "directus-dev"
+  ADMIN_EMAIL: "admin@example.com"
+
+secretEnv:
+  DB_USER: "postgres"
+  DB_PASSWORD: "pass123"
+  ADMIN_PASSWORD: "pass123"
+  SECRET: "your-secret-key"
+
+persistence:
+  enabled: true
+  storageClass: "manual"
+  accessMode: ReadWriteMany
+  size: 10Gi
+  nfsServer: "192.168.56.108"
+  nfsPath: "/nfs/directus_test"
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
