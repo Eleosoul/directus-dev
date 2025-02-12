@@ -21,9 +21,9 @@ spec:
             - containerPort: 8055
           envFrom:
             - configMapRef:
-                name: directus-config
+                name: directus-config-test
             - secretRef:
-                name: directus-secret
+                name: directus-secret-test
           volumeMounts:
             - mountPath: "/directus/uploads"
               name: directus-storage
