@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: directus-dev
+  name: directus-test
   namespace: {{ .Release.Namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
@@ -30,4 +30,4 @@ spec:
       volumes:
         - name: directus-storage
           persistentVolumeClaim:
-            claimName: directus-nfs-pvc-dev
+            claimName: directus-nfs-pvc-test
