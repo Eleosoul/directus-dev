@@ -1,4 +1,4 @@
-replicaCount: 1000000
+replicaCount: 100
 
 image:
   repository: directus/directus
