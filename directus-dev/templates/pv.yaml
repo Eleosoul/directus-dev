@@ -11,6 +11,3 @@ spec:
   nfs:
     server: {{ .Values.persistence.nfsServer }}
     path: "{{ .Values.persistence.nfsPath }}"
-  mountOptions:
-  - vers=4.1
-  - sec=sys
