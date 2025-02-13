@@ -7,7 +7,7 @@ image:
 
 service:
   type: LoadBalancer
-  port: 8085
+  port: 8099
   targetPort: 8055
 
 env:
