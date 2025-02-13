@@ -8,7 +8,7 @@ image:
 service:
   type: LoadBalancer
   port: 8080
-  targetPort: 8055
+  targetPort: 8099
 
 env:
   DB_CLIENT: "postgres"
